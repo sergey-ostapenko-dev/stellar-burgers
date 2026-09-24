@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "../../../../weblarek-main"
+		},
+		{
+			"path": "../../../../my-ts-app"
+		},
+		{
+			"path": "../../../../blog-customizer"
+		},
+		{
+			"path": "../../../../webpack-react"
+		},
+		{
+			"path": "../../../../webpack-react_new"
+		},
+		{
+			"path": "../../../../webpack-react-redux"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../webpack-react--jest"
+		}
+	],
+	"settings": {}
+}

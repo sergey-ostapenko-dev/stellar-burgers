@@ -36,3 +36,30 @@ export const ProtectedRoute = ({
 
   return component;
 };
+
+import { useLocation, Navigate, replace } from "react-router-dom";
+
+type ProtectedRouteProps = {
+    onlyUnAuth?: boolean;
+    component: React.JSX.Element;
+};
+
+export const ProtectedRoute = (
+    { onlyUnAuth = false, component }: ProtectedRouteProps
+): React.JSX.Element => {
+
+    const user = localStorage.getItem('accessToken')
+    const location = useLocation();
+
+    const isAuth = !!user;
+
+    if (!onlyUnAuth && !isAuth) {
+        return <Navigate to="/login" state={{ from: location }} replace />;
+    }
+
+    if (onlyUnAuth && isAuth) {
+        return <Navigate to="/" state={{ from: location }} replace />;
+    }
+
+    return component;
+};
